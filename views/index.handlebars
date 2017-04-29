@@ -1,0 +1,40 @@
+<h1>OMELETTES~~ MMM!!!</h1>
+
+<h2>Uneaten Omelettes!</h2>
+
+<ul>
+  {{#each omelettes}}
+    {{#unless this.devoured}}
+      <li>
+        {{this.omelette_name}}
+        <form action="{{id}}?_method=PUT" method="POST">
+          <input type="hidden" name="devoured" value="true">
+          <button>DEVOUR!</button>
+        </form>
+      </li>
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>Eaten Omelettes!</h2>
+
+<ul>
+  {{#each omelettes}}
+    {{#if this.devoured}}
+      <li>
+        {{this.omelette_name}}
+      </li>
+    {{/if}}
+  {{/each}}
+</ul>
+
+<h2>Add an Omelette</h2>
+<form class="create-update-form" action="/" method="POST">
+
+  <div class="form-group">
+    <label for="omelette">Omelette Name:</label>
+    <input type="text" id="omelette" name="omelette_name">
+  </div>
+
+  <button type="submit">Add Omelette</button>
+</form>

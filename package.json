@@ -1,0 +1,26 @@
+{
+  "name": "omelette-restaurant",
+  "version": "1.0.0",
+  "description": "make and devour them omelettes",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maglori/omelette.git"
+  },
+  "author": "vm",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maglori/omelette/issues"
+  },
+  "homepage": "https://github.com/maglori/omelette#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.8",
+    "mysql": "^2.13.0"
+  }
+}
