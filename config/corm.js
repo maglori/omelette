@@ -23,8 +23,8 @@ var corm = {
 		});
 	},
 	updateOne: function(tableName, devoured, condition, cb) {
-		connection.query("UPDATE " + tableName + " SET " + devoured +  " WHERE " + condition,
-		function(err, result) {
+		var querystring = "UPDATE " + tableName + " SET " + devoured +  " WHERE " + condition;
+		connection.query(querystring, function(err, result) {
 			if (err) {
 				throw err;
 			};
