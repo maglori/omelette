@@ -22,8 +22,8 @@ var corm = {
 			cb(result);
 		});
 	},
-	updateOne: function(tableName, devoured, id, cb) {
-		connection.query("UPDATE " + tableName + " SET devoured = ? WHERE id = ?", [devoured, id],
+	updateOne: function(tableName, devoured, condition, cb) {
+		connection.query("UPDATE " + tableName + " SET " + devoured +  " WHERE " + condition,
 		function(err, result) {
 			if (err) {
 				throw err;

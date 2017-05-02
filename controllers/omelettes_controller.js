@@ -18,13 +18,13 @@ router.post("/", function(req, res) {
 		res.redirect("/")
 	});
 
-router.put(":id", function(req, res) {
-	console.log(req.params.id);
-	corm.updateOne("omelettes", req.body.devoured, req.params.id, function(result) {
+router.post("/:id", function(req, res) {
+	var condtion = "id = " + req.params.id;
+	var devoured = "devoured = " + req.body["devoured"]
+	corm.updateOne("omelettes", devoured, condition, function(result) {
 		res.redirect("/");
 	});
 });
-
 });
 
 module.exports = router;
